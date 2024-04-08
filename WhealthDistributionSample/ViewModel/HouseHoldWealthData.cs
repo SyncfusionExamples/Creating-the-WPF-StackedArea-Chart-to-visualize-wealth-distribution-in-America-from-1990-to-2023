@@ -26,7 +26,6 @@ namespace WhealthDistributionSample
 
         public HouseHoldWealthData()
         {
-
             Bottom50Data = new ObservableCollection<WealthData>();
             Next40 = new ObservableCollection<WealthData>();
             Top9 = new ObservableCollection<WealthData>();
