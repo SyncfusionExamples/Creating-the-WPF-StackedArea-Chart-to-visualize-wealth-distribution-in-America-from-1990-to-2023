@@ -24,7 +24,6 @@ namespace WhealthDistributionSample
 
         public ObservableCollection<WealthData> TopPoint1 { get; set; }
 
-
         public HouseHoldWealthData()
         {
 
@@ -33,7 +32,7 @@ namespace WhealthDistributionSample
             Top9 = new ObservableCollection<WealthData>();
             Top1 = new ObservableCollection<WealthData>();
             TopPoint1 = new ObservableCollection<WealthData>();
-            //Collection = new ObservableCollection<ChartModel>();
+
             ReadCSV();
         }
     
@@ -52,9 +51,6 @@ namespace WhealthDistributionSample
                     lines.Add(line);
                 }
                 lines.RemoveAt(0);
-
-                //double _bottom50 = 0, _next40 = 0, _top9 = 0, _top1 = 0, _topPoint1 = 0;
-
 
                 foreach (var dataPoint in lines)
                 {
