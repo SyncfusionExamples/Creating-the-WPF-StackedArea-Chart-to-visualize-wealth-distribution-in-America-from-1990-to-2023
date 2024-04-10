@@ -12,7 +12,7 @@ A WPF Stacked Area Chart is a data visualization tool used to represent the cumu
 
 In this demonstration, we've focused on enhancing the appearance of the Stacked Area Series interior while also customizing the chart axis labels using custom labels for better representation and understanding.
 
-additionally, we enhancing the appearance of Stacked Area chart following properties for better visualization.
+Additionally, we enhancing the appearance of Stacked Area chart following properties for better visualization.
 
     * Header.
     * Axis Labels and styles. 
