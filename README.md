@@ -17,11 +17,11 @@ Additionally, we enhancing the appearance of Stacked Area chart with following p
 * Header.
 * Axis Labels and styles.  
 
-We use the WPF SfChart folowing feature for displaying the additional information about the chart.
+We use the following WPF SfChart feature to displaying the additional information about the chart.
 
 * [Text Annotation](https://help.syncfusion.com/wpf/charts/annotations#text-annotation) - This feature allows the user to add Text property in specific points over the chart area.
 
-We also customize the chart layout using border and use the stroke thickness, stroke color and background color properties for better visual of chart. 
+Also customize the chart layout using border and use the stroke thickness, stroke color and background color properties for better visual of chart. 
 
 For a comprehensive, step-by-step guide on implementing this chart and understanding the underlying process, please refer to our detailed blog post titled "Wealth Distribution in America from 1990 to 2023."
 
