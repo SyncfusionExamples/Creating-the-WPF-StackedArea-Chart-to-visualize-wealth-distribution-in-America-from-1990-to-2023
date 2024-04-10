@@ -22,7 +22,7 @@
 
             <charts:SfChart.Resources>
 
-                <charts:NumericalAxis x:Key="yAxis" Interval="50000000"  LabelCreated="NumericalAxis_LabelCreated"  Maximum="146000000"  >
+                <charts:NumericalAxis x:Key="yAxis" x:Name="YAxis" Interval="50000000" ActualRangeChanged="NumericalAxis_ActualRangeChanged" LabelCreated="NumericalAxis_LabelCreated"  Maximum="146000000"  >
                     <charts:NumericalAxis.LabelStyle>
                         <charts:LabelStyle Foreground="White"/>
                     </charts:NumericalAxis.LabelStyle>
@@ -48,7 +48,7 @@
 
                         <StackPanel Grid.Column="1"   Margin="5,2,0,0" HorizontalAlignment="Left" Orientation="Vertical">
                             <Label Content="A Comprehensive Analysis of Household Wealth Distribution" FontSize="22"  FontFamily="AntaRegular" Foreground="White"/>
-                            <Label Content="in the US by Exploring Income Groups." FontSize="18"  Margin="0,2,0,0" FontFamily="AntaRegular" Foreground="White"/>
+                            <Label Content="in the US by Exploring Income Groups" FontSize="22"  Margin="0,2,0,0" FontFamily="AntaRegular" Foreground="White"/>
                         </StackPanel>
                     </Grid>
 
@@ -67,32 +67,18 @@
 
             <charts:SfChart.SecondaryAxis>
 
-                <charts:NumericalAxis OpposedPosition="True"  ShowGridLines="False" Interval="0.25" EdgeLabelsDrawingMode="Shift" TickLineSize="0" >
-                    <charts:NumericalAxis.LabelStyle>
-                        <charts:LabelStyle Foreground="White" FontSize="18"  />
-                    </charts:NumericalAxis.LabelStyle>
+                <charts:NumericalAxis x:Name="customAxis" OpposedPosition="True" LabelsSource="{Binding Labels}" ContentPath="Content" PositionPath="Position"  ShowGridLines="False"  EdgeLabelsDrawingMode="Shift" TickLineSize="0" >
+
                     <charts:NumericalAxis.AxisLineStyle>
                         <Style TargetType="Line">
                             <Setter Property="StrokeThickness" Value="0"/>
                         </Style>
                     </charts:NumericalAxis.AxisLineStyle>
 
-                    <charts:NumericalAxis.CustomLabels >
-                        <charts:ChartAxisLabel Position="0" LabelContent="Bottom 50%" />
-
-                        <charts:ChartAxisLabel Position="0.21" LabelContent="50 - 90%"/>
-
-                        <charts:ChartAxisLabel Position="0.5" LabelContent="90 - 99%"/>
-
-                        <charts:ChartAxisLabel Position="0.75" LabelContent="Top 0.9%"/>
-
-                        <charts:ChartAxisLabel Position="0.95" LabelContent="Top 0.1%"/>
-                    </charts:NumericalAxis.CustomLabels>
-
                     <charts:NumericalAxis.LabelTemplate>
                         <DataTemplate>
                             <Border Width="70" Background="{Binding LabelContent, Converter= {StaticResource ColorCoverter}}">
-                                <Label Content="{Binding LabelContent}" Foreground="Black" HorizontalContentAlignment="Center" FontWeight="Bold"/>
+                                <Label Content="{Binding LabelContent}" Foreground="Black" HorizontalContentAlignment="Center" FontWeight="SemiBold"/>
                             </Border>
                         </DataTemplate>
                     </charts:NumericalAxis.LabelTemplate>
@@ -102,7 +88,7 @@
             </charts:SfChart.SecondaryAxis>
 
             <charts:SfChart.Annotations>
-                <charts:TextAnnotation CoordinateUnit="Axis"  Y1="0.66" X1="70.60" >
+                <charts:TextAnnotation CoordinateUnit="Axis"  Y1="100000000" X1="70.60" >
                     <charts:TextAnnotation.ContentTemplate>
                         <DataTemplate>
                             <StackPanel>
@@ -112,11 +98,11 @@
                     </charts:TextAnnotation.ContentTemplate>
 
                 </charts:TextAnnotation>
-                <charts:TextAnnotation CoordinateUnit="Axis"  Y1="0.12" X1="75.60" >
+                <charts:TextAnnotation CoordinateUnit="Axis"  Y1="18000000" X1="75.60" >
                     <charts:TextAnnotation.ContentTemplate>
                         <DataTemplate>
                             <StackPanel>
-                                <TextBlock Text="In 2011, the bottom 50% reached a historically low share of wealth, at just 0.4%"  Foreground="Black" FontSize="9" FontWeight="Medium" Width="120" Height="50"  TextAlignment="Justify" TextWrapping="Wrap"/>
+                                <TextBlock Text="In 2011, the bottom 50% reached a historically low share of wealth, at just 0.4%"  Foreground="Black" FontSize="10" FontWeight="Medium" Width="135" Height="50"  TextAlignment="Justify" TextWrapping="Wrap"/>
                             </StackPanel>
                         </DataTemplate>
                     </charts:TextAnnotation.ContentTemplate>

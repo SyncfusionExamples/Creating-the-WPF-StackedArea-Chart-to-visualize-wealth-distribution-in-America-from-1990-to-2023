@@ -37,6 +37,12 @@ namespace WhealthDistributionSample
                 e.AxisLabel.Position = 0;
             }
         }
+
+        private void NumericalAxis_ActualRangeChanged(object sender, ActualRangeChangedEventArgs e)
+        {
+            customAxis.Maximum = (double?)e.ActualMaximum;
+            customAxis.Minimum = (double?)e.ActualMinimum;
+        }
     }
 
 
@@ -68,5 +74,4 @@ namespace WhealthDistributionSample
             return null;
         }
     }
-
 }

@@ -11,6 +11,11 @@ namespace WhealthDistributionSample
         public string Date { get; set; }
 
         public double Value { get; set; }
+        public double Bottom50 { get; set; }
+        public double Next40 { get; set; }
+        public double Top9 { get; set; }
+        public double Top1 { get; set; }
+        public double TopPoint1 { get; set; }
 
         public WealthData(string date, double value)
         {
