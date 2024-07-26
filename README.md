@@ -23,6 +23,6 @@ We use the following WPF SfChart feature to displaying the additional informatio
 
 Also customize the chart layout using border and use the stroke thickness, stroke color and background color properties for better visual of chart. 
 
-For a comprehensive, step-by-step guide on implementing this chart and understanding the underlying process, please refer to our detailed blog post titled "Wealth Distribution in America from 1990 to 2023."
+For a comprehensive, step-by-step guide on implementing this chart and understanding the underlying process, please refer to our detailed blog post titled ["Wealth Distribution in America from 1990 to 2023."](https://www.syncfusion.com/blogs/post/wpf-stacked-area-chart-us-wealth-data)
 
 If you have a any query, can also contact us through our [support forums](https://www.syncfusion.com/forums), [support portal](https://support.syncfusion.com/) or [feedback portal](https://www.syncfusion.com/feedback). We are always happy to assist you!
